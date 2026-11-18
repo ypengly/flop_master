@@ -1,0 +1,38 @@
+; Engine configuration file for Flop Master (Godot 4.4)
+config_version=5
+
+[application]
+
+config/name="Flop Master"
+config/description="A 3D ragdoll physics game about glorious failure."
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.4", "Forward Plus")
+
+[autoload]
+
+Config="*res://scripts/autoload/config.gd"
+SaveData="*res://scripts/autoload/save_data.gd"
+InputConfig="*res://scripts/autoload/input_config.gd"
+AudioManager="*res://scripts/autoload/audio_manager.gd"
+Progression="*res://scripts/autoload/progression.gd"
+ScoreManager="*res://scripts/autoload/score_manager.gd"
+LevelManager="*res://scripts/autoload/level_manager.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+common/physics_ticks_per_second=120
+common/max_physics_steps_per_frame=8
+3d/solver/solver_iterations=24
+3d/default_gravity=24.0
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.55, 0.78, 0.95, 1)
